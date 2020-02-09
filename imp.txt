@@ -1,0 +1,2 @@
+docker run -d -u root -p 49001:8080 -p 50000:50000 -v /root/muferral/jenkins:/var/jenkins_home -v $(which docker):/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v /root:/home --restart=always jenkins/jenkins
+

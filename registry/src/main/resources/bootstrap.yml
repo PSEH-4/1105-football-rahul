@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: registry
+  profiles:
+    active: dev
+    include: composite
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        composite:
+          - type: git
+            uri: https://github.com/sonirahul/configurations.git
+        prefix: /config
+      label: master
+      profile: dev
+      name: registry
